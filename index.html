@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pomodoro App</title>
+</head>
+<body>
+    <header>
+        <h1 class="heading"> <span class="wavy">boost productivity</span> with the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a> Timer</h1>
+    </header>
+    <section>
+        <div class="btn-bar">
+            <button data-pomodoro-btn class="btn timer-btn"></button>
+            <button data-shortBreak-btn class="btn timer-btn"></button>
+            <button data-longBreak-btn class="btn timer-btn"></button>
+        </div>
+        <div data-timer></div>
+        </div>
+        <div class="control-btns">
+            <button class="btn start-pause-btns" data-start-btn>START</button>
+            <button class="btn start-pause-btns" data-pause-btn>PAUSE</button>
+        </div>
+
+        <div class="audios">
+            <audio data-ring="end" src="./assets/Ting Ting Sound Notification.mp3"></audio>
+            <audio data-ring="start" src="./assets/button-press.wav"></audio>
+        </div>
+
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

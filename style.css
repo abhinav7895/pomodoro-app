@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --bg-default: #01214b;
+  --text-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--bg-default);
+  color: var(--text-color);
+  transition: background 1 ease-in-out; 
+  background: linear-gradient(#33d8d8, #0d0f92);
+}
+
+
+
+div[data-timer] {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-block: 40px;
+  font-size: 8rem;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn {
+  --color : black;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid ;
+  box-shadow: .5px 1px 0 0 var(--color),1.5px 2px 0 0 var(--color),2.5px 3px 0 0 var(--color),3.5px 4px 0 0 var(--color),4.5px 5px 0 0 var(--color),5.5px 6px 0 0 var(--color);
+  transition: box-shadow top 0.2s transform left 0.3s;
+  border-radius: 5px;
+  
+}
+.btn:hover {
+  transform: translateY(5px) translateX(5px);
+  box-shadow: none;
+}
+
+.timer-btn {
+
+}
+
+section {
+    margin-inline: 1rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.158);
+    max-width: 600px;
+    /* border-radius: 15px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem;
+    box-shadow: 1px 1px 3px;
+}
+
+[data-pomodoro-btn]::before {
+  content: "Pomodoro";
+}
+
+[data-shortBreak-btn]::before {
+  content: "Short Break";
+}
+
+[data-longBreak-btn]::before {
+  content: "Long Break";
+}
+
+.btn-bar {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.start-pause-btns {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.start-pause-btns:focus {
+    outline: 2px solid rgb(255, 255, 255);
+    outline-offset: 6px;
+    outline-style: dotted;
+}
+
+header {
+  max-width: 650px;
+}
+
+header > h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+header > h1 > a{
+  color: rgb(245, 242, 242);
+  transition: 0.2s ease;
+  text-underline-offset: 4px;
+}
+header > h1 > a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.wavy {
+  display: block;
+  font-size: 2.5rem;
+  text-decoration: underline wavy;
+  text-underline-offset: 6px;
+  text-decoration-color: rgb(101, 255, 81);
+}
+
+.control-btns {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (width < 35.75em) {
+  .wavy {
+    font-size: 1.9rem;
+  }
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  section {
+    width: 100%;
+  }
+  .btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+  }
+  div[data-timer] {
+    font-size: 5rem;
+    letter-spacing: 3px;
+    margin-block: 38px;
+  }
+
+}
+
+
+@media (max-width: 26.5635rem) {
+  [data-pomodoro-btn]::before {
+    content: "Pomo";
+  }
+
+  [data-shortBreak-btn]::before {
+    content: "Short";
+  }
+
+  [data-longBreak-btn]::before {
+    content: "Long";
+  }
+}
