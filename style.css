@@ -17,7 +17,6 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background: var(--bg-default);
   color: var(--text-color);
@@ -107,6 +106,7 @@ section {
 
 header {
   max-width: 650px;
+  margin-top: 64px;
 }
 
 .heading {
@@ -136,6 +136,23 @@ header {
   display: flex;
   gap: 2rem;
 }
+
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 0.2em;
+
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.footer-text a{
+  color: inherit;
+}
+
 
 @media (width < 35.75em) {
   .wavy {
@@ -172,3 +189,4 @@ header {
     content: "Long";
   }
 }
+
