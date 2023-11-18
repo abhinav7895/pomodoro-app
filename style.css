@@ -1,10 +1,13 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;500&display=swap");
 
+/* Global Styles */
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
 :root {
   --bg-default: #01214b;
   --text-color: white;
@@ -24,6 +27,7 @@ body {
   background: linear-gradient(#33d8d8, #0d0f92);
 }
 
+/* Timer Styles */
 div[data-timer] {
   font-family: Arial, Helvetica, sans-serif;
   margin-block: 40px;
@@ -34,6 +38,7 @@ div[data-timer] {
   user-select: none;
 }
 
+/* Button Styles */
 .btn {
   --color: black;
   font-weight: 500;
@@ -46,26 +51,31 @@ div[data-timer] {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: 1px solid;
-  box-shadow: 0.5px 1px 0 0 var(--color), 1.5px 2px 0 0 var(--color),
-    2.5px 3px 0 0 var(--color), 3.5px 4px 0 0 var(--color),
-    4.5px 5px 0 0 var(--color), 5.5px 6px 0 0 var(--color);
+  box-shadow: 
+    0.5px 1px 0 0 var(--color), 
+    1.5px 2px 0 0 var(--color),
+    2.5px 3px 0 0 var(--color),
+    3.5px 4px 0 0 var(--color),
+    4.5px 5px 0 0 var(--color),
+    5.5px 6px 0 0 var(--color);
   transition: box-shadow top 0.2s transform left 0.3s;
   border-radius: 5px;
 }
+
 .btn:hover {
   transform: translateY(5px) translateX(5px);
   box-shadow: none;
 }
 
-.timer-btn {
-}
+/* Timer Button Styles */
+.timer-btn {}
 
+/* Section Styles */
 section {
   margin-inline: 1rem;
   position: relative;
   background-color: rgba(255, 255, 255, 0.158);
   max-width: 600px;
-  /* border-radius: 15px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +84,7 @@ section {
   box-shadow: 1px 1px 3px;
 }
 
+/* Button Labels */
 [data-pomodoro-btn]::before {
   content: "Pomodoro";
 }
@@ -86,6 +97,7 @@ section {
   content: "Long Break";
 }
 
+/* Button Bar Styles */
 .btn-bar {
   display: flex;
   gap: 30px;
@@ -93,6 +105,7 @@ section {
   justify-content: center;
 }
 
+/* Start-Pause Buttons Styles */
 .start-pause-btns {
   font-weight: 500;
   font-size: 1.4rem;
@@ -109,6 +122,7 @@ section {
   display: none;
 }
 
+/* Header Styles */
 header {
   max-width: 650px;
   margin-top: 64px;
@@ -119,10 +133,12 @@ header {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
+
 .heading > a {
   color: rgb(227, 226, 226);
   text-underline-offset: 4px;
 }
+
 .heading > a:hover {
   color: white;
   text-decoration: none;
@@ -137,32 +153,33 @@ header {
   font-size: clamp(2rem, 0.6363636363636365rem + 5.818181818181818vw, 3rem);
 }
 
+/* Control Buttons Styles */
 .control-btns {
   display: flex;
   gap: 2rem;
 }
 
-
-/* footer */
+/* Footer Styles */
 .footer {
   position: absolute;
   bottom: 0.2em;
-
 }
 
 .footer-text {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
 }
-.footer-text a{
+
+.footer-text a {
   color: inherit;
 }
 
-
+/* Media Queries */
 @media (width < 35.75em) {
   .wavy {
     font-size: 1.9rem;
   }
+
   .heading {
     font-size: 1.4rem;
   }
@@ -170,10 +187,12 @@ header {
   section {
     width: 100%;
   }
+
   .btn {
     padding: 0.3rem 0.7rem;
     font-size: 0.9rem;
   }
+
   div[data-timer] {
     font-size: 5rem;
     letter-spacing: 3px;
@@ -182,6 +201,7 @@ header {
 }
 
 @media (max-width: 26.5635rem) {
+  /* Adjust button labels for smaller screens */
   [data-pomodoro-btn]::before {
     content: "Pomo";
   }
